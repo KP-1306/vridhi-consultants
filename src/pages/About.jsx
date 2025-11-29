@@ -1,15 +1,17 @@
+// src/pages/About.jsx
+
 import React from "react";
 
 export default function About() {
   return (
-    <section>
+    <section id="about">
       <div className="container section-inner">
         <div className="section-header">
           <div>
             <div className="section-title">About VridhI Consultants</div>
             <div className="section-kicker">
-              A focused team of CAs and tax professionals helping businesses
-              stay compliant and grow with confidence.
+              A boutique CA and tax advisory firm helping businesses, MSMEs and
+              professionals stay fully compliant while they focus on growth.
             </div>
           </div>
           <div className="section-pill">Compliance with clarity</div>
@@ -24,13 +26,14 @@ export default function About() {
                 marginBottom: "0.9rem",
               }}
             >
-              VridhI Consultants was started with a simple belief —{" "}
+              VridhI Consultants was founded with a simple idea:{" "}
               <strong>
-                compliance should give you peace of mind, not more confusion
+                compliance should give you peace of mind, not add to your
+                workload
               </strong>
-              . We combine CA-led expertise with a practical, business-first
-              approach so that you always know where you stand with tax, GST and
-              regulatory requirements.
+              . We bring together CA-led expertise in tax, GST, ROC/MCA and
+              finance to give you a single, dependable partner for all statutory
+              requirements.
             </p>
             <p
               style={{
@@ -39,17 +42,15 @@ export default function About() {
                 marginBottom: "0.9rem",
               }}
             >
-              We work with{" "}
+              Our team works closely with{" "}
               <strong>
                 startups, proprietors, MSMEs, family businesses and growing
                 companies
               </strong>{" "}
-              across sectors. For many clients, we act as their{" "}
-              <strong>
-                “virtual finance &amp; compliance department”
-              </strong>{" "}
-              handling registrations, returns, books, audits and banking
-              documentation so they can focus on customers and operations.
+              across sectors. For many clients, we function as their{" "}
+              <strong>virtual finance &amp; compliance department</strong> –
+              handling registrations, day-to-day accounting, GST and income-tax
+              filings, audits and banking documentation.
             </p>
             <p
               style={{
@@ -57,9 +58,10 @@ export default function About() {
                 color: "#9ca3af",
               }}
             >
-              Whether you are regularising past compliances or planning for
-              growth, our job is to convert complex regulations into clear,
-              actionable steps.
+              Whether you are regularising past compliances or planning for the
+              next phase of expansion, our role is to convert complex laws into
+              clear, actionable steps – with defined timelines, ownership and
+              measurable outcomes.
             </p>
           </div>
 
@@ -69,28 +71,30 @@ export default function About() {
                 <strong>Who we serve</strong>
                 <span>
                   Individuals, proprietors, firms, LLPs, companies, NGOs and
-                  trusts across sectors.
+                  trusts across trading, services and manufacturing sectors.
                 </span>
               </div>
               <div className="pill-item">
                 <strong>How we work</strong>
                 <span>
-                  Structured onboarding, transparent scope, clear timelines and
-                  regular updates.
+                  Structured onboarding, documented scope of work, agreed
+                  checklists and regular status updates so there are no
+                  surprises.
                 </span>
               </div>
               <div className="pill-item">
-                <strong>What you get</strong>
+                <strong>What you gain</strong>
                 <span>
-                  Clean books, timely filings, reduced notice risk and
-                  decision-ready reports.
+                  Clean books, timely filings, lower risk of notices and
+                  decision-ready MIS for owners, lenders and investors.
                 </span>
               </div>
               <div className="pill-item">
-                <strong>Engagement style</strong>
+                <strong>Engagement model</strong>
                 <span>
-                  One-time projects (setup / clean-up) or ongoing monthly
-                  retainers as your compliance partner.
+                  One-time assignments (set-up, clean-up, due diligence) or
+                  ongoing monthly retainers as your long-term compliance
+                  partner.
                 </span>
               </div>
             </div>
@@ -100,4 +104,3 @@ export default function About() {
     </section>
   );
 }
-
