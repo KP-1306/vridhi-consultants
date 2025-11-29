@@ -46,7 +46,7 @@ export default function Navbar() {
         </nav>
 
         <div className="nav-cta">
-          <div className="nav-phone">Call: +91-XXXXXXXXXX</div>
+          <div className="nav-phone">Call: +91-9458107394</div>
           <Link to="/contact" className="btn-outline">
             Request a callback
           </Link>
