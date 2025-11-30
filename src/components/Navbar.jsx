@@ -1,3 +1,5 @@
+// src/components/Navbar.jsx
+
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
 
@@ -5,18 +7,24 @@ export default function Navbar() {
   return (
     <header>
       <div className="container nav">
+        {/* Brand / Logo */}
         <div className="logo">
-          <div className="logo-mark">
-            <span>V</span>
-          </div>
-          <div>
-            VRIDHI&nbsp;CONSULTANTS
-            <span className="logo-subtitle">
-              Tax • GST • ROC • Advisory
-            </span>
-          </div>
+          <Link to="/" className="logo-link">
+            <img
+              src="/logo-vridhiconsultants.jpeg"
+              alt="VridhI Consultants logo"
+              className="logo-img"
+            />
+            <div className="logo-text">
+              <div className="logo-title">VRIDHI CONSULTANTS</div>
+              <span className="logo-subtitle">
+                Tax • GST • ROC • Advisory
+              </span>
+            </div>
+          </Link>
         </div>
 
+        {/* Nav links */}
         <nav className="nav-links">
           <NavLink
             to="/"
@@ -45,6 +53,7 @@ export default function Navbar() {
           </NavLink>
         </nav>
 
+        {/* Right-side CTA */}
         <div className="nav-cta">
           <div className="nav-phone">Call: +91-9458107394</div>
           <Link to="/contact" className="btn-outline">
@@ -55,4 +64,3 @@ export default function Navbar() {
     </header>
   );
 }
-
