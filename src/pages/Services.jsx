@@ -1,7 +1,7 @@
 // src/pages/Services.jsx
 
 import React from "react";
-import { Link } from "react-router-dom";      // ✅ ADD THIS
+import { Link } from "react-router-dom";
 import { services } from "../data/services.js";
 
 export default function Services() {
@@ -23,12 +23,12 @@ export default function Services() {
 
         <div className="services-grid">
           {services.map((svc) => (
-            <Link
-              key={svc.slug}                      // use slug as key
-              to={`/services/${svc.slug}`}        // clickable card
-              className="service-card-link"       // optional class for styling
-            >
-              <article className="service-card">
+            <article key={svc.tag} className="service-card">
+              <Link
+                to={`/services/${svc.slug}`}
+                className="service-card-link"
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
                 <div className="service-tag">{svc.tag}</div>
                 <div className="service-name">{svc.name}</div>
                 <p className="service-desc">{svc.desc}</p>
@@ -37,8 +37,8 @@ export default function Services() {
                     <li key={idx}>{b}</li>
                   ))}
                 </ul>
-              </article>
-            </Link>
+              </Link>
+            </article>
           ))}
         </div>
       </div>
