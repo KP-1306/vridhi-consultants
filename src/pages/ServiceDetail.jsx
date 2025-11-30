@@ -6,21 +6,16 @@ import { services } from "../data/services";
 
 export default function ServiceDetail() {
   const { slug } = useParams();
-  const service = services.find((s) => s.slug === slug);
 
-  if (!service) {
+  const svc = services.find((s) => s.slug === slug);
+
+  if (!svc) {
     return (
       <section>
         <div className="container section-inner">
-          <div className="section-header">
-            <div>
-              <div className="section-title">Service not found</div>
-              <div className="section-kicker">
-                The service you’re looking for doesn’t exist or the link is
-                outdated.
-              </div>
-            </div>
-          </div>
+          <p style={{ color: "#fca5a5", marginBottom: "1rem" }}>
+            The requested service could not be found.
+          </p>
           <Link to="/services" className="btn-outline">
             ← Back to all services
           </Link>
@@ -34,20 +29,18 @@ export default function ServiceDetail() {
       <div className="container section-inner">
         <div className="section-header">
           <div>
-            <div className="section-title">{service.name}</div>
-            <div className="section-kicker">{service.desc}</div>
+            <div className="section-title">{svc.name}</div>
+            <div className="section-kicker">{svc.desc}</div>
           </div>
-          <div className="section-pill">Service {service.tag}</div>
+          <div className="section-pill">Service {svc.tag}</div>
         </div>
 
         <div className="two-col">
           <div>
-            <h3 className="mb-2 text-sm font-semibold uppercase tracking-wide">
-              What we cover
-            </h3>
+            <h3 className="service-detail-heading">What we cover</h3>
             <ul className="service-list">
-              {service.bullets.map((item, idx) => (
-                <li key={idx}>{item}</li>
+              {svc.bullets.map((b, idx) => (
+                <li key={idx}>{b}</li>
               ))}
             </ul>
           </div>
@@ -57,29 +50,25 @@ export default function ServiceDetail() {
               <div className="pill-item">
                 <strong>Next step</strong>
                 <span>
-                  Share your requirement with us and we’ll suggest the right
-                  scope, timelines and professional fee for this service.
+                  Share a brief of your requirement and we’ll confirm scope,
+                  timelines and fees.
                 </span>
               </div>
               <div className="pill-item">
                 <strong>Talk to a consultant</strong>
                 <span>
-                  Call us on the number in the header or submit an enquiry from
-                  the contact page.
+                  Call us directly or{" "}
+                  <Link to="/contact" className="inline-link">
+                    submit an enquiry
+                  </Link>{" "}
+                  for this service.
                 </span>
               </div>
             </div>
 
             <div style={{ marginTop: "1.5rem" }}>
-              <Link to="/contact" className="btn-primary">
-                Discuss this service
-              </Link>
-              <Link
-                to="/services"
-                className="btn-outline"
-                style={{ marginLeft: "0.75rem" }}
-              >
-                Back to all services
+              <Link to="/services" className="btn-outline">
+                ← Back to all services
               </Link>
             </div>
           </div>
