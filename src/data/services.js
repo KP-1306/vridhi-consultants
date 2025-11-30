@@ -1,6 +1,9 @@
+// src/data/services.js
+
 export const services = [
   {
     tag: "01",
+    slug: "business-setup-new-company-registration",
     name: "Business Setup & New Company Registration",
     desc:
       "Start your business the right way. We help you choose the right structure and handle all the paperwork end-to-end.",
@@ -13,6 +16,7 @@ export const services = [
   },
   {
     tag: "02",
+    slug: "gst-registration-compliance",
     name: "GST Registration & Compliance",
     desc:
       "All GST work under one roof – from new registration to returns and notices, we manage your GST so you stay compliant.",
@@ -27,6 +31,7 @@ export const services = [
   },
   {
     tag: "03",
+    slug: "income-tax-itr-filing",
     name: "Income Tax & ITR Filing",
     desc:
       "Hassle-free ITR filing for individuals and businesses. We make sure your returns are accurate, on time and tax-efficient.",
@@ -39,6 +44,7 @@ export const services = [
   },
   {
     tag: "04",
+    slug: "accounting-bookkeeping",
     name: "Accounting & Bookkeeping",
     desc:
       "Clean books, clear decisions. We maintain your accounts so you always know your real profit and cash flow.",
@@ -51,6 +57,7 @@ export const services = [
   },
   {
     tag: "05",
+    slug: "audit-assurance-services",
     name: "Audit & Assurance Services",
     desc: "Independent review for true and fair financial statements.",
     bullets: [
@@ -62,6 +69,7 @@ export const services = [
   },
   {
     tag: "06",
+    slug: "roc-mca-compliance",
     name: "ROC / MCA Compliance (Companies & LLP)",
     desc: "Stay compliant with corporate laws without stress.",
     bullets: [
@@ -73,6 +81,7 @@ export const services = [
   },
   {
     tag: "07",
+    slug: "payroll-pf-esic-labour-compliance",
     name: "Payroll, PF / ESIC & Labour Compliance",
     desc: "Smooth payroll and peace of mind on labour laws.",
     bullets: [
@@ -84,6 +93,7 @@ export const services = [
   },
   {
     tag: "08",
+    slug: "business-advisory-loans-project-reports",
     name: "Business Advisory, Loans & Project Reports",
     desc: "Numbers that help you grow – not just file returns.",
     bullets: [
@@ -94,4 +104,3 @@ export const services = [
     ]
   }
 ];
-
