@@ -11,8 +11,8 @@ export const services = [
       "Proprietorship, Partnership, LLP, Private Limited, OPC registration",
       "NGO / Section 8 company, Society / Trust registration",
       "PAN & TAN application",
-      "MSME / Udyam & Shop & Establishment registration"
-    ]
+      "MSME / Udyam & Shop & Establishment registration",
+    ],
   },
   {
     tag: "02",
@@ -26,8 +26,8 @@ export const services = [
       "Monthly / quarterly returns (GSTR-1, 3B etc.)",
       "Annual returns & reconciliation (GSTR-9 / 9C)",
       "E-invoice & e-way bill support",
-      "Reply to GST notices, audits & assessments"
-    ]
+      "Reply to GST notices, audits & assessments",
+    ],
   },
   {
     tag: "03",
@@ -39,8 +39,8 @@ export const services = [
       "ITR for salaried, business, professionals & freelancers",
       "ITR for firm, LLP, company, HUF, trust / NGO",
       "Tax planning for salary, capital gains & business income",
-      "Handling income-tax notices, scrutiny & appeals"
-    ]
+      "Handling income-tax notices, scrutiny & appeals",
+    ],
   },
   {
     tag: "04",
@@ -52,8 +52,8 @@ export const services = [
       "Day-to-day bookkeeping (Tally / Zoho / other software)",
       "Finalisation – Profit & Loss, Balance Sheet",
       "Monthly MIS and management reports",
-      "Setup of accounting systems & internal controls"
-    ]
+      "Setup of accounting systems & internal controls",
+    ],
   },
   {
     tag: "05",
@@ -64,8 +64,8 @@ export const services = [
       "Statutory audit (Companies Act)",
       "Tax audit (Income-tax Act)",
       "GST audit & reconciliation support",
-      "Internal audit & special-purpose reviews"
-    ]
+      "Internal audit & special-purpose reviews",
+    ],
   },
   {
     tag: "06",
@@ -76,8 +76,8 @@ export const services = [
       "Annual filings (AOC-4, MGT-7 / 7A, LLP-8, LLP-11 and others)",
       "Director KYC (DIR-3 KYC)",
       "Change in directors, partners, office address, share capital",
-      "Other ROC forms & event-based compliances"
-    ]
+      "Other ROC forms & event-based compliances",
+    ],
   },
   {
     tag: "07",
@@ -88,8 +88,8 @@ export const services = [
       "Monthly payroll processing & payslips",
       "TDS on salary and Form 16",
       "PF & ESIC registration and monthly returns",
-      "Professional Tax registration & returns (where applicable)"
-    ]
+      "Professional Tax registration & returns (where applicable)",
+    ],
   },
   {
     tag: "08",
@@ -100,7 +100,7 @@ export const services = [
       "Project reports & CMA data for bank loans",
       "Working capital & term loan assistance",
       "Budgeting, forecasting & cash-flow planning",
-      "Virtual CFO services for SMEs"
-    ]
-  }
+      "Virtual CFO services for SMEs",
+    ],
+  },
 ];
