@@ -17,6 +17,7 @@ export default function About() {
           <div className="section-pill">Compliance with clarity</div>
         </div>
 
+        {/* Firm overview */}
         <div className="two-col">
           <div>
             <p
@@ -97,6 +98,157 @@ export default function About() {
                   partner.
                 </span>
               </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Leadership / Our Team */}
+        <div
+          className="team-section"
+          style={{
+            marginTop: "3rem",
+            paddingTop: "2rem",
+            borderTop: "1px solid rgba(148, 163, 184, 0.35)",
+          }}
+        >
+          <h3
+            style={{
+              fontSize: "1.2rem",
+              fontWeight: 600,
+              color: "#f9fafb",
+              marginBottom: "0.25rem",
+            }}
+          >
+            Our Leadership Team
+          </h3>
+          <p
+            style={{
+              fontSize: "0.85rem",
+              color: "#9ca3af",
+              marginBottom: "1.5rem",
+            }}
+          >
+            Experienced professionals leading tax, compliance and advisory so
+            your business always has a trusted point of contact.
+          </p>
+
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+              gap: "1.25rem",
+            }}
+          >
+            {/* Founder / CEO */}
+            <div
+              style={{
+                padding: "1.4rem 1.2rem",
+                borderRadius: "0.9rem",
+                border: "1px solid rgba(56, 189, 248, 0.35)",
+                background:
+                  "linear-gradient(135deg, rgba(8, 47, 73, 0.9), rgba(15, 23, 42, 0.95))",
+                boxShadow: "0 18px 45px rgba(8, 47, 73, 0.55)",
+              }}
+            >
+              <div
+                style={{
+                  fontSize: "0.9rem",
+                  fontWeight: 700,
+                  letterSpacing: "0.03em",
+                  textTransform: "uppercase",
+                  color: "#7dd3fc",
+                  marginBottom: "0.4rem",
+                }}
+              >
+                Founder &amp; CEO
+              </div>
+              <div
+                style={{
+                  fontSize: "1.05rem",
+                  fontWeight: 700,
+                  color: "#f9fafb",
+                  marginBottom: "0.45rem",
+                }}
+              >
+                Naveen Durgapal
+              </div>
+              <p
+                style={{
+                  fontSize: "0.8rem",
+                  color: "#d1d5db",
+                  lineHeight: 1.6,
+                }}
+              >
+                Leads the firm&apos;s vision, client relationships and overall
+                growth, with a focus on practical, business-first compliance
+                solutions.
+              </p>
+            </div>
+
+            {/* Key leadership 1 */}
+            <div
+              style={{
+                padding: "1.2rem 1.1rem",
+                borderRadius: "0.9rem",
+                border: "1px solid rgba(51, 65, 85, 0.85)",
+                background: "linear-gradient(135deg, #020617, #020617)",
+              }}
+            >
+              <div
+                style={{
+                  fontSize: "0.8rem",
+                  fontWeight: 700,
+                  letterSpacing: "0.08em",
+                  textTransform: "uppercase",
+                  color: "#60a5fa",
+                  marginBottom: "0.4rem",
+                }}
+              >
+                Senior Partner – Tax &amp; GST
+              </div>
+              <p
+                style={{
+                  fontSize: "0.8rem",
+                  color: "#d1d5db",
+                  lineHeight: 1.6,
+                }}
+              >
+                Drives direct and indirect tax strategy, complex filings and
+                representation on GST and income tax matters.
+              </p>
+            </div>
+
+            {/* Key leadership 2 */}
+            <div
+              style={{
+                padding: "1.2rem 1.1rem",
+                borderRadius: "0.9rem",
+                border: "1px solid rgba(51, 65, 85, 0.85)",
+                background: "linear-gradient(135deg, #020617, #020617)",
+              }}
+            >
+              <div
+                style={{
+                  fontSize: "0.8rem",
+                  fontWeight: 700,
+                  letterSpacing: "0.08em",
+                  textTransform: "uppercase",
+                  color: "#a5b4fc",
+                  marginBottom: "0.4rem",
+                }}
+              >
+                Partner – Audit &amp; Assurance
+              </div>
+              <p
+                style={{
+                  fontSize: "0.8rem",
+                  color: "#d1d5db",
+                  lineHeight: 1.6,
+                }}
+              >
+                Oversees statutory, tax and internal audits to ensure financial
+                statements are reliable and bank / investor ready.
+              </p>
             </div>
           </div>
         </div>
