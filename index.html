@@ -7,17 +7,29 @@
       content="VridhI Consultants - Professional tax, GST, ROC and compliance services for businesses, startups and MSMEs."
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>VridhI Consultants | Tax, GST & Compliance</title>
+    <title>VridhI Consultants | Tax, GST &amp; Compliance</title>
   </head>
   <body>
     <div id="root"></div>
 
-    <!-- Hidden form for Netlify Forms detection -->
+    <!-- Hidden form for Netlify Forms detection (kept off-screen) -->
     <form
       name="contact"
       netlify
       netlify-honeypot="bot-field"
       hidden
+      aria-hidden="true"
+      style="
+        position: absolute;
+        left: -9999px;
+        top: auto;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        opacity: 0;
+        pointer-events: none;
+        display: block;
+      "
     >
       <input type="text" name="name" />
       <input type="text" name="phone" />
