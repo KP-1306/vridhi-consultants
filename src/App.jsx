@@ -24,10 +24,10 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
 
-          {/* New: individual service pages, using the `slug` from services.js */}
+          {/* Individual service pages (uses `slug` from services.js) */}
           <Route path="/services/:slug" element={<ServiceDetail />} />
 
-          {/* Fallback – send anything unknown back to home */}
+          {/* Fallback – anything unknown goes to home */}
           <Route path="*" element={<Home />} />
         </Routes>
       </main>
