@@ -3,45 +3,62 @@ import React, { useState } from "react";
 
 const TESTIMONIALS = [
   {
-    quote:
-      "VridhI Consultants have been handling our GST, TDS and ROC work for the last 3 years. Returns are always filed on time and we get clear updates before every due date.",
+    id: 1,
+    initials: "RV",
     name: "Rahul Verma",
-    title: "Director, Manufacturing MSME – Noida"
+    title: "Director, Manufacturing MSME – Noida",
+    quote:
+      "VridhI Consultants have been handling our GST, TDS and ROC work for the last 3 years. Returns are always filed on time and we get clear updates before every due date."
   },
   {
+    id: 2,
+    initials: "SP",
+    name: "Sonal Patel",
+    title: "Founder, D2C Fashion Brand – Ahmedabad",
     quote:
-      "As a startup founder, I wanted someone who could explain taxation in simple language. The team helped us choose the right structure, set up our books and stay bank-ready for funding.",
-    name: "Sakshi Mehta",
-    title: "Co-founder, Tech Startup – Gurgaon"
+      "They set up our company, GST and payroll in one go. I don’t have to chase multiple people for ROC, income tax and accounting anymore – everything is coordinated."
   },
   {
+    id: 3,
+    initials: "AK",
+    name: "Ankit Kumar",
+    title: "Proprietor, Logistics & Transport – Delhi NCR",
     quote:
-      "They cleaned up two years of pending compliances, regularised our GST and income-tax filings and coordinated smoothly with our internal accounts team.",
-    name: "Anil Sharma",
-    title: "Owner, Retail Chain – Ghaziabad"
+      "Notices used to be a constant headache. Now every query is answered with proper working papers and replies. Compliance is finally predictable for us."
   },
   {
+    id: 4,
+    initials: "NS",
+    name: "Neha Shah",
+    title: "Consultant & Freelancer – Mumbai",
     quote:
-      "Professional, responsive and practical. I can focus on my practice while they take care of registrations, returns and notices for my clinic.",
-    name: "Dr. Nidhi Singh",
-    title: "Medical Practitioner – Delhi NCR"
+      "My ITR, TDS and advance tax are all planned in advance. They explain everything in simple language, so I know exactly how much to keep aside and why."
+  },
+  {
+    id: 5,
+    initials: "VK",
+    name: "Vikram Khanna",
+    title: "Director, Tech Startup – Bengaluru",
+    quote:
+      "From incorporation to ESOP design, they have been a sounding board for every decision. Clean books and timely filings really helped in our first funding round."
   }
 ];
 
 export default function HomeTestimonials() {
-  const [active, setActive] = useState(0);
+  const [page, setPage] = useState(0);
 
-  const prev = () =>
-    setActive((idx) => (idx === 0 ? TESTIMONIALS.length - 1 : idx - 1));
-  const next = () =>
-    setActive((idx) => (idx === TESTIMONIALS.length - 1 ? 0 : idx + 1));
+  const perPage = 3;
+  const totalPages = Math.ceil(TESTIMONIALS.length / perPage);
+  const start = page * perPage;
+  const visible = TESTIMONIALS.slice(start, start + perPage);
 
-  const current = TESTIMONIALS[active];
+  const handlePrev = () => setPage((p) => Math.max(p - 1, 0));
+  const handleNext = () => setPage((p) => Math.min(p + 1, totalPages - 1));
 
   return (
     <section className="home-testimonials">
       <div className="container section-inner">
-        <div className="section-header section-header-centered">
+        <div className="section-header section-header-center">
           <div>
             <div className="section-title">See what our clients have to say</div>
             <div className="section-kicker">
@@ -52,53 +69,49 @@ export default function HomeTestimonials() {
         </div>
 
         <div className="testimonial-shell">
-          {/* Slider card */}
           <button
             type="button"
-            className="testimonial-arrow testimonial-arrow-left"
-            onClick={prev}
-            aria-label="Previous testimonial"
+            className="testimonial-nav"
+            onClick={handlePrev}
+            disabled={page === 0}
+            aria-label="Previous testimonials"
           >
             ‹
           </button>
 
-          <article className="testimonial-card">
-            <p className="testimonial-quote">“{current.quote}”</p>
-            <div className="testimonial-meta">
-              <div className="testimonial-avatar">
-                {current.name
-                  .split(" ")
-                  .map((n) => n[0])
-                  .join("")}
-              </div>
-              <div>
-                <div className="testimonial-name">{current.name}</div>
-                <div className="testimonial-title">{current.title}</div>
-              </div>
-            </div>
-          </article>
+          <div className="testimonial-grid">
+            {visible.map((t) => (
+              <article key={t.id} className="testimonial-card">
+                <p className="testimonial-quote">“{t.quote}”</p>
+                <div className="testimonial-footer">
+                  <div className="testimonial-avatar">{t.initials}</div>
+                  <div>
+                    <div className="testimonial-name">{t.name}</div>
+                    <div className="testimonial-meta">{t.title}</div>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
 
           <button
             type="button"
-            className="testimonial-arrow testimonial-arrow-right"
-            onClick={next}
-            aria-label="Next testimonial"
+            className="testimonial-nav"
+            onClick={handleNext}
+            disabled={page === totalPages - 1}
+            aria-label="Next testimonials"
           >
             ›
           </button>
         </div>
 
-        {/* Dots */}
         <div className="testimonial-dots">
-          {TESTIMONIALS.map((_, idx) => (
-            <button
+          {Array.from({ length: totalPages }).map((_, idx) => (
+            <span
               key={idx}
-              type="button"
               className={
-                "testimonial-dot" + (idx === active ? " testimonial-dot-active" : "")
+                "testimonial-dot" + (idx === page ? " testimonial-dot--active" : "")
               }
-              onClick={() => setActive(idx)}
-              aria-label={`Show testimonial ${idx + 1}`}
             />
           ))}
         </div>
