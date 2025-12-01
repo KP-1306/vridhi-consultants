@@ -3,28 +3,35 @@ import React from "react";
 
 const FAQ_ITEMS = [
   {
-    q: "Who will be handling my tax and compliance work?",
-    a: "All assignments are supervised by experienced Chartered Accountants. Routine work is managed by our trained team, but final review and key decisions are always done by a CA."
+    question: "Who will be handling my returns and filings?",
+    answer:
+      "All core work is done or reviewed by a qualified Chartered Accountant. Our team handles data collation and preparation, but final returns and important submissions go out only after CA review."
   },
   {
-    q: "How much time does it take to register a new company or firm?",
-    a: "Subject to availability of name and document readiness, proprietorships and partnerships can be set up within a few days. Private limited companies and LLPs generally take 7–10 working days once KYC and signatures are complete."
+    question: "How much time is needed to set up a private limited company?",
+    answer:
+      "In most cases, a new private limited company can be incorporated within 7–10 working days after receiving all documents, name approval and DSCs. We will share a checklist and keep you updated on each step."
   },
   {
-    q: "Can you also manage GST, TDS and ROC on a monthly basis?",
-    a: "Yes. Many clients engage us as their virtual finance and compliance team. We handle monthly accounting, GST and TDS returns, ROC filings and coordination with your internal staff or accountant."
+    question: "Which entity structure is most suitable for a startup?",
+    answer:
+      "It depends on your funding, risk and tax plan. Many startups prefer a Private Limited Company or LLP. During our first call, we walk you through pros and cons for proprietorship, partnership, LLP and company before you decide."
   },
   {
-    q: "Do you work only with large companies or also with small businesses?",
-    a: "We actively work with individuals, proprietors, freelancers, professionals, MSMEs, startups and growing companies. Engagements are customised based on the size and complexity of your business."
+    question: "What are the benefits under the Presumptive Taxation Scheme?",
+    answer:
+      "Presumptive schemes like 44ADA / 44AD can reduce record-keeping burden and simplify tax for eligible small businesses and professionals. We check your turnover, expense pattern and future plans before recommending it."
   },
   {
-    q: "What documents are generally required to get started?",
-    a: "Basic KYC (PAN, Aadhaar, address proof), business details, previous returns (if any) and bank statements are usually enough to start. For specific services like company incorporation or loans, we share a detailed checklist."
+    question: "Can I obtain two DINs for my two companies?",
+    answer:
+      "No. As per MCA rules, every individual can have only one DIN which can be used across multiple directorships. We help you link the same DIN to all the companies where you are a director."
   },
   {
-    q: "How do you charge for your services?",
-    a: "For one-time work like registration, clean-up or a project report, we follow task-based pricing. For ongoing compliance, we usually recommend a fixed monthly/annual retainer so you have clarity on cost and scope."
+    question:
+      "Is it mandatory to maintain detailed records of all financial transactions?",
+    answer:
+      "Yes. Proper invoices, vouchers and bank records are essential for GST, income tax and audit. We can design a simple, practical system for you so that your books stay clean and future assessments are easier to handle."
   }
 ];
 
@@ -32,30 +39,24 @@ export default function HomeFAQ() {
   return (
     <section className="home-faq">
       <div className="container section-inner">
-        <div className="section-header section-header-centered">
+        <div className="section-header section-header-center">
           <div>
             <div className="section-title">Frequently asked questions</div>
             <div className="section-kicker">
-              Answers to some of the common questions business owners ask us
-              before coming on board.
+              Short answers to common queries. For anything specific, we are one
+              call away.
             </div>
           </div>
         </div>
 
         <div className="faq-list">
-          {FAQ_ITEMS.map((item, idx) => (
-            <details
-              key={idx}
-              className="faq-item"
-              open={idx === 0} // first one open by default
-            >
-              <summary className="faq-summary">
-                <span>{item.q}</span>
-                <span className="faq-icon">⌄</span>
+          {FAQ_ITEMS.map((faq, idx) => (
+            <details key={idx} className="faq-item">
+              <summary>
+                <span>{faq.question}</span>
+                <span className="faq-icon">▾</span>
               </summary>
-              <div className="faq-body">
-                <p>{item.a}</p>
-              </div>
+              <p>{faq.answer}</p>
             </details>
           ))}
         </div>
