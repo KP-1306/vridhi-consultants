@@ -9,11 +9,18 @@ export default function Footer() {
   return (
     <footer className="footer-shell">
       <div className="container section-inner footer-bar">
-        <div className="footer-copy">
-          © {year} VridhI Consultants. All rights reserved.
+        {/* Left side: copyright + tagline */}
+        <div className="footer-meta">
+          <div className="footer-copy">
+            © {year} VridhI Consultants. All rights reserved.
+          </div>
+          <div className="footer-tagline">
+            Tax • GST • ROC • Advisory
+          </div>
         </div>
 
-        <div className="footer-links">
+        {/* Right side: navigation links */}
+        <nav className="footer-links" aria-label="Footer navigation">
           <a href="#top" className="footer-link">
             Back to top
           </a>
@@ -38,7 +45,7 @@ export default function Footer() {
           <Link to="/refund-policy" className="footer-link">
             Refund Policy
           </Link>
-        </div>
+        </nav>
       </div>
     </footer>
   );
