@@ -28,6 +28,7 @@ export default function ServiceDetail() {
   return (
     <section>
       <div className="container section-inner">
+        {/* Header */}
         <div className="section-header">
           <div>
             <div className="section-eyebrow">Service {service.tag}</div>
@@ -39,6 +40,7 @@ export default function ServiceDetail() {
           </div>
         </div>
 
+        {/* Core inclusions + contact card */}
         <div className="two-col">
           <div>
             <h2 className="service-detail-subtitle">
@@ -74,6 +76,40 @@ export default function ServiceDetail() {
             </Link>
           </aside>
         </div>
+
+        {/* Extra: who it’s for + benefits */}
+        {(service.whoFor && service.whoFor.length > 0) ||
+        (service.benefits && service.benefits.length > 0) ? (
+          <div style={{ marginTop: "2.5rem" }}>
+            <div className="two-col">
+              {service.whoFor && service.whoFor.length > 0 && (
+                <div>
+                  <h2 className="service-detail-subtitle">
+                    Who is this service ideal for?
+                  </h2>
+                  <ul className="service-list">
+                    {service.whoFor.map((item, idx) => (
+                      <li key={idx}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {service.benefits && service.benefits.length > 0 && (
+                <div>
+                  <h2 className="service-detail-subtitle">
+                    How this service helps your business
+                  </h2>
+                  <ul className="service-list">
+                    {service.benefits.map((item, idx) => (
+                      <li key={idx}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+          </div>
+        ) : null}
       </div>
     </section>
   );
