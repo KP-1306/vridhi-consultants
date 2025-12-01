@@ -1,6 +1,10 @@
+// src/pages/Home.jsx
+
 import React from "react";
 import { Link } from "react-router-dom";
 import { services } from "../data/services.js";
+import HomeTestimonials from "../components/HomeTestimonials";
+import HomeFAQ from "../components/HomeFAQ";
 
 export default function Home() {
   const featuredServices = services.slice(0, 4);
@@ -161,7 +165,7 @@ export default function Home() {
                 style={{
                   fontSize: "0.95rem",
                   marginBottom: "0.6rem",
-                  fontWeight: 600,
+                  fontWeight: 600
                 }}
               >
                 How we work with you
@@ -212,7 +216,10 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* NEW: Testimonials and FAQ sections */}
+      <HomeTestimonials />
+      <HomeFAQ />
     </>
   );
 }
-
