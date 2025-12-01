@@ -40,7 +40,7 @@ export default function ServiceDetail() {
           </div>
         </div>
 
-        {/* Core inclusions + contact card */}
+        {/* Main content: inclusions + contact card */}
         <div className="two-col">
           <div>
             <h2 className="service-detail-subtitle">
@@ -77,7 +77,7 @@ export default function ServiceDetail() {
           </aside>
         </div>
 
-        {/* Extra: who it’s for + benefits */}
+        {/* Who it’s for + benefits */}
         {(service.whoFor && service.whoFor.length > 0) ||
         (service.benefits && service.benefits.length > 0) ? (
           <div style={{ marginTop: "2.5rem" }}>
@@ -110,6 +110,23 @@ export default function ServiceDetail() {
             </div>
           </div>
         ) : null}
+
+        {/* FAQs */}
+        {service.faqs && service.faqs.length > 0 && (
+          <div style={{ marginTop: "2.5rem" }}>
+            <h2 className="service-detail-subtitle">
+              Frequently asked questions
+            </h2>
+            <div className="service-faq-list">
+              {service.faqs.map((faq, idx) => (
+                <details key={idx} className="service-faq-item">
+                  <summary>{faq.question}</summary>
+                  <p>{faq.answer}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );
