@@ -1,7 +1,7 @@
 // src/App.jsx
 
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
@@ -13,7 +13,7 @@ import Footer from "./components/Footer";
 
 export default function App() {
   return (
-    <Router>
+    <>
       <Navbar />
 
       <main>
@@ -21,11 +21,9 @@ export default function App() {
           {/* Main pages */}
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/services/:slug" element={<ServiceDetail />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-
-          {/* SEO-friendly service detail pages */}
-          <Route path="/services/:slug" element={<ServiceDetail />} />
 
           {/* Fallback – send anything unknown back to home */}
           <Route path="*" element={<Home />} />
@@ -33,6 +31,6 @@ export default function App() {
       </main>
 
       <Footer />
-    </Router>
+    </>
   );
 }
