@@ -25,13 +25,13 @@ export default function Contact() {
             </p>
             <dl>
               <dt>Phone / WhatsApp</dt>
-              <dd>+91-XXXXXXXXXX</dd>
+              <dd>+91-9458107394</dd>
 
               <dt>Email</dt>
               <dd>info@vridhiconsultants.com</dd>
 
               <dt>Office</dt>
-              <dd>(Update your office address here)</dd>
+              <dd>Haldwani, Uttrakhand</dd>
             </dl>
             <p
               style={{
