@@ -23,37 +23,23 @@ export default function Services() {
 
         <div className="services-grid">
           {services.map((svc) => (
-            <article key={svc.tag} className="service-card">
-              {/* Make the whole card clickable */}
-              <Link
-                to={`/services/${svc.slug}`}
-                className="service-card-link"
-                style={{
-                  display: "block",
-                  textDecoration: "none",
-                  color: "inherit",
-                }}
-              >
+            <Link
+              key={svc.tag}
+              to={`/services/${svc.slug}`}
+              className="service-card-link"
+            >
+              <article className="service-card">
                 <div className="service-tag">{svc.tag}</div>
-                <div className="service-name">{svc.name}</div>
+                <h2 className="service-name">{svc.name}</h2>
                 <p className="service-desc">{svc.desc}</p>
                 <ul className="service-list">
                   {svc.bullets.map((b, idx) => (
                     <li key={idx}>{b}</li>
                   ))}
                 </ul>
-
-                <div
-                  style={{
-                    marginTop: "0.75rem",
-                    fontSize: "0.8rem",
-                    color: "#60a5fa",
-                  }}
-                >
-                  View full details →
-                </div>
-              </Link>
-            </article>
+                <span className="service-cta">View full details →</span>
+              </article>
+            </Link>
           ))}
         </div>
       </div>
