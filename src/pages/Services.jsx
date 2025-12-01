@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
-import { services } from "../data/services.js";
+import { services } from "../data/services";
 
 export default function Services() {
   return (
@@ -24,10 +24,15 @@ export default function Services() {
         <div className="services-grid">
           {services.map((svc) => (
             <article key={svc.tag} className="service-card">
+              {/* Make the whole card clickable */}
               <Link
                 to={`/services/${svc.slug}`}
                 className="service-card-link"
-                style={{ textDecoration: "none", color: "inherit" }}
+                style={{
+                  display: "block",
+                  textDecoration: "none",
+                  color: "inherit",
+                }}
               >
                 <div className="service-tag">{svc.tag}</div>
                 <div className="service-name">{svc.name}</div>
@@ -37,6 +42,16 @@ export default function Services() {
                     <li key={idx}>{b}</li>
                   ))}
                 </ul>
+
+                <div
+                  style={{
+                    marginTop: "0.75rem",
+                    fontSize: "0.8rem",
+                    color: "#60a5fa",
+                  }}
+                >
+                  View full details →
+                </div>
               </Link>
             </article>
           ))}
