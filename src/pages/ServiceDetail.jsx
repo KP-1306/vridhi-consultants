@@ -8,6 +8,7 @@ export default function ServiceDetail() {
   const { slug } = useParams();
   const service = services.find((s) => s.slug === slug);
 
+  // 404-style state if slug is invalid
   if (!service) {
     return (
       <section>
@@ -28,6 +29,13 @@ export default function ServiceDetail() {
   return (
     <section>
       <div className="container section-inner">
+        {/* TOP LEFT BACK LINK */}
+        <div className="service-detail-topbar">
+          <Link to="/services" className="service-back-link">
+            ← Back to all services
+          </Link>
+        </div>
+
         {/* Header */}
         <div className="section-header">
           <div>
@@ -70,10 +78,6 @@ export default function ServiceDetail() {
                 </a>
               </p>
             </div>
-
-            <Link to="/services" className="service-back-link">
-              ← Back to all services
-            </Link>
           </aside>
         </div>
 
