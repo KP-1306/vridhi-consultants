@@ -135,11 +135,11 @@ export default function About() {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+              gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
               gap: "1.25rem",
             }}
           >
-            {/* Founder / CEO */}
+            {/* Founder */}
             <div
               style={{
                 padding: "1.4rem 1.2rem",
@@ -160,7 +160,7 @@ export default function About() {
                   marginBottom: "0.4rem",
                 }}
               >
-                Founder &amp; CEO
+                Founder &amp; Managing Partner
               </div>
               <div
                 style={{
@@ -185,7 +185,7 @@ export default function About() {
               </p>
             </div>
 
-            {/* Key leadership 1 */}
+            {/* Practice Head – Business Setup & Corporate Compliance */}
             <div
               style={{
                 padding: "1.2rem 1.1rem",
@@ -204,7 +204,7 @@ export default function About() {
                   marginBottom: "0.4rem",
                 }}
               >
-                Senior Partner – Tax &amp; GST
+                Practice Head – Business Setup &amp; Corporate Compliance
               </div>
               <p
                 style={{
@@ -213,12 +213,13 @@ export default function About() {
                   lineHeight: 1.6,
                 }}
               >
-                Drives direct and indirect tax strategy, complex filings and
-                representation on GST and income tax matters.
+                Specialises in new business setup, company and LLP incorporation,
+                MCA/ROC filings and ongoing corporate law compliance for
+                startups and MSMEs.
               </p>
             </div>
 
-            {/* Key leadership 2 */}
+            {/* Practice Head – Direct Tax & ITR */}
             <div
               style={{
                 padding: "1.2rem 1.1rem",
@@ -237,7 +238,74 @@ export default function About() {
                   marginBottom: "0.4rem",
                 }}
               >
-                Partner – Audit &amp; Assurance
+                Practice Head – Direct Tax &amp; ITR
+              </div>
+              <p
+                style={{
+                  fontSize: "0.8rem",
+                  color: "#d1d5db",
+                  lineHeight: 1.6,
+                }}
+              >
+                Leads income-tax advisory and return filing for individuals and
+                businesses, assessments and tax-efficient planning for
+                promoters.
+              </p>
+            </div>
+
+            {/* Practice Head – GST & Indirect Tax */}
+            <div
+              style={{
+                padding: "1.2rem 1.1rem",
+                borderRadius: "0.9rem",
+                border: "1px solid rgba(51, 65, 85, 0.85)",
+                background: "linear-gradient(135deg, #020617, #020617)",
+              }}
+            >
+              <div
+                style={{
+                  fontSize: "0.8rem",
+                  fontWeight: 700,
+                  letterSpacing: "0.08em",
+                  textTransform: "uppercase",
+                  color: "#c4b5fd",
+                  marginBottom: "0.4rem",
+                }}
+              >
+                Practice Head – GST &amp; Indirect Tax
+              </div>
+              <p
+                style={{
+                  fontSize: "0.8rem",
+                  color: "#d1d5db",
+                  lineHeight: 1.6,
+                }}
+              >
+                Handles GST registration, monthly and annual returns, audits,
+                departmental notices and representation before authorities.
+              </p>
+            </div>
+
+            {/* Practice Head – Audit & Assurance */}
+            <div
+              style={{
+                padding: "1.2rem 1.1rem",
+                borderRadius: "0.9rem",
+                border: "1px solid rgba(51, 65, 85, 0.85)",
+                background: "linear-gradient(135deg, #020617, #020617)",
+              }}
+            >
+              <div
+                style={{
+                  fontSize: "0.8rem",
+                  fontWeight: 700,
+                  letterSpacing: "0.08em",
+                  textTransform: "uppercase",
+                  color: "#fbbf24",
+                  marginBottom: "0.4rem",
+                }}
+              >
+                Practice Head – Audit &amp; Assurance
               </div>
               <p
                 style={{
@@ -247,7 +315,8 @@ export default function About() {
                 }}
               >
                 Oversees statutory, tax and internal audits to ensure financial
-                statements are reliable and bank / investor ready.
+                statements are reliable, compliant and ready for banks and
+                investors.
               </p>
             </div>
           </div>
