@@ -662,3 +662,36 @@ footer {
   color: #9ca3af;
   margin-top: 0.15rem;
 }
+
+
+// New
+
+.service-faq-list {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.service-faq-item {
+  background: rgba(15, 23, 42, 0.7);
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+}
+
+.service-faq-item summary {
+  cursor: pointer;
+  font-weight: 500;
+  list-style: none;
+}
+
+.service-faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.service-faq-item p {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #e5e7eb;
+}
