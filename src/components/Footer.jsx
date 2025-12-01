@@ -1,6 +1,7 @@
 // src/components/Footer.jsx
 
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -25,6 +26,18 @@ export default function Footer() {
           >
             vridhiconsultants.com
           </a>
+          <span className="footer-dot">•</span>
+          <Link to="/service-agreement" className="footer-link">
+            Service Agreement
+          </Link>
+          <span className="footer-dot">•</span>
+          <Link to="/privacy-policy" className="footer-link">
+            Privacy Policy
+          </Link>
+          <span className="footer-dot">•</span>
+          <Link to="/refund-policy" className="footer-link">
+            Refund Policy
+          </Link>
         </div>
       </div>
     </footer>
