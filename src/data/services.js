@@ -1,13 +1,10 @@
 // src/data/services.js
 
-// Master list of services.
-// `slug` controls the URL: /services/<slug>
 export const services = [
   {
     tag: "01",
     slug: "business-setup",
     name: "Business Setup & New Company Registration",
-    shortTitle: "Business Setup & Company Registration",
     desc:
       "Start your business the right way. We help you choose the right structure and handle all the paperwork end-to-end.",
     bullets: [
@@ -21,7 +18,6 @@ export const services = [
     tag: "02",
     slug: "gst-compliance",
     name: "GST Registration & Compliance",
-    shortTitle: "GST Registration & Compliance",
     desc:
       "All GST work under one roof – from new registration to returns and notices, we manage your GST so you stay compliant.",
     bullets: [
@@ -37,7 +33,6 @@ export const services = [
     tag: "03",
     slug: "income-tax-itr",
     name: "Income Tax & ITR Filing",
-    shortTitle: "Income Tax & ITR Filing",
     desc:
       "Hassle-free ITR filing for individuals and businesses. We make sure your returns are accurate, on time and tax-efficient.",
     bullets: [
@@ -51,7 +46,6 @@ export const services = [
     tag: "04",
     slug: "accounting-bookkeeping",
     name: "Accounting & Bookkeeping",
-    shortTitle: "Accounting & Bookkeeping",
     desc:
       "Clean books, clear decisions. We maintain your accounts so you always know your real profit and cash flow.",
     bullets: [
@@ -65,9 +59,7 @@ export const services = [
     tag: "05",
     slug: "audit-assurance",
     name: "Audit & Assurance Services",
-    shortTitle: "Audit & Assurance Services",
-    desc:
-      "Independent review for true and fair financial statements tailored to banks, investors and regulators.",
+    desc: "Independent review for true and fair financial statements.",
     bullets: [
       "Statutory audit (Companies Act)",
       "Tax audit (Income-tax Act)",
@@ -79,8 +71,7 @@ export const services = [
     tag: "06",
     slug: "roc-mca-compliance",
     name: "ROC / MCA Compliance (Companies & LLP)",
-    shortTitle: "ROC / MCA Compliance",
-    desc: "Stay compliant with corporate laws without stress or last-minute rush.",
+    desc: "Stay compliant with corporate laws without stress.",
     bullets: [
       "Annual filings (AOC-4, MGT-7 / 7A, LLP-8, LLP-11 and others)",
       "Director KYC (DIR-3 KYC)",
@@ -90,10 +81,9 @@ export const services = [
   },
   {
     tag: "07",
-    slug: "payroll-pf-esic-labour",
+    slug: "payroll-labour-compliance",
     name: "Payroll, PF / ESIC & Labour Compliance",
-    shortTitle: "Payroll & Labour Compliance",
-    desc: "Smooth payroll and peace of mind on labour laws and statutory payouts.",
+    desc: "Smooth payroll and peace of mind on labour laws.",
     bullets: [
       "Monthly payroll processing & payslips",
       "TDS on salary and Form 16",
@@ -105,7 +95,6 @@ export const services = [
     tag: "08",
     slug: "business-advisory-loans",
     name: "Business Advisory, Loans & Project Reports",
-    shortTitle: "Business Advisory & Loans",
     desc: "Numbers that help you grow – not just file returns.",
     bullets: [
       "Project reports & CMA data for bank loans",
