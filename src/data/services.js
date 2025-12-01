@@ -25,6 +25,23 @@ export const services = [
       "Clarity on promoter roles, shareholding and compliance requirements from day one.",
       "You start operations with clean, compliant documents that banks, vendors and investors accept.",
     ],
+    faqs: [
+      {
+        question: "How do I know which type of entity is right for me?",
+        answer:
+          "We understand your business model, funding plans, risk level and family situation, then recommend the right structure (proprietorship, partnership, LLP, company, NGO, etc.) with pros and cons in simple language.",
+      },
+      {
+        question: "How long does a new company or LLP registration usually take?",
+        answer:
+          "If all documents are ready and there are no MCA objections, registrations typically take 7–15 working days. We share an approximate timeline up-front for your specific case.",
+      },
+      {
+        question: "Can I upgrade from proprietorship to LLP or company later?",
+        answer:
+          "Yes. Many clients start as proprietors and later move to LLP or private limited. We guide you on tax impact, transfer of business, and how to keep records clean during the transition.",
+      },
+    ],
   },
   {
     tag: "02",
@@ -43,7 +60,7 @@ export const services = [
     whoFor: [
       "Traders, manufacturers and service providers crossing GST thresholds",
       "Businesses dealing with inter-state sales, exports or e-commerce platforms",
-      "Firms receiving frequent GST notices / mismatches in 2A / 2B",
+      "Firms receiving frequent GST notices or mismatches in GSTR-2A / 2B",
       "Businesses wanting someone to own monthly GST filings completely",
     ],
     benefits: [
@@ -51,6 +68,23 @@ export const services = [
       "Better input tax credit management through regular reconciliation.",
       "Fewer notices and easier handling of departmental queries and audits.",
       "Clear visibility of your GST position so you can price and plan confidently.",
+    ],
+    faqs: [
+      {
+        question: "From when is GST registration compulsory?",
+        answer:
+          "Compulsory registration normally starts once you cross the prescribed turnover limit or do inter-state supplies / e-commerce sales. We review your turnover and advise clearly whether you are liable or still optional.",
+      },
+      {
+        question: "What if I have already missed GST returns?",
+        answer:
+          "We first check your GST portal status, then prepare pending returns with proper reconciliation. We also estimate late fees and interest so that you know the impact before filing.",
+      },
+      {
+        question: "Can you handle departmental notices on my behalf?",
+        answer:
+          "Yes. We draft replies, prepare working papers and support you during hearings or online proceedings, while keeping you informed in simple language at each step.",
+      },
     ],
   },
   {
@@ -66,7 +100,7 @@ export const services = [
       "Handling income-tax notices, scrutiny & appeals",
     ],
     whoFor: [
-      "Salaried individuals with multiple Form-16s or investments",
+      "Salaried individuals with multiple Form 16s or investments",
       "Business owners and professionals with mixed sources of income",
       "NRIs with income or assets in India",
       "Anyone who has received income-tax notices or mismatch alerts",
@@ -74,8 +108,25 @@ export const services = [
     benefits: [
       "Returns filed correctly with all disclosures – reducing future queries.",
       "Optimised tax outgo through legal deductions and planning.",
-      "Support in responding to CPC/departmental notices and queries.",
+      "Support in responding to CPC / departmental notices and queries.",
       "Peace of mind that your past years and current filing are in order.",
+    ],
+    faqs: [
+      {
+        question: "What documents do I need to share for ITR filing?",
+        answer:
+          "Typically we need Form 16, AIS/TIS, bank statements, investment proofs, capital gain statements and details of any foreign income or assets. We share a simple checklist based on your profile.",
+      },
+      {
+        question: "Is it compulsory to file ITR even if my income is below the limit?",
+        answer:
+          "In some cases, yes – for example if you have high-value transactions, foreign assets, or wish to claim a refund. We advise you after reviewing your AIS and other details.",
+      },
+      {
+        question: "Can you take over from my previous CA smoothly?",
+        answer:
+          "Yes. We review last year’s return, match it with the current AIS and books, and then continue from there so there is no break in your tax history.",
+      },
     ],
   },
   {
@@ -91,7 +142,7 @@ export const services = [
       "Setup of accounting systems & internal controls",
     ],
     whoFor: [
-      "Businesses that don’t have an in-house accountant or controller",
+      "Businesses that do not have an in-house accountant or controller",
       "Founders who get data only at year-end from their accountant",
       "Companies preparing for funding, loans or due diligence",
       "Businesses that want monthly profitability and cash-flow visibility",
@@ -101,6 +152,23 @@ export const services = [
       "Monthly MIS so owners can see sales, margins and expenses clearly.",
       "Better internal control over cash, receivables and payables.",
       "Reduced dependency on a single accountant; process-driven accounts.",
+    ],
+    faqs: [
+      {
+        question: "Will you work on my software or move everything to a new one?",
+        answer:
+          "We are comfortable with Tally, Zoho Books and most popular systems. Wherever possible we work on your existing setup and only suggest changes if there are strong reasons.",
+      },
+      {
+        question: "Can you work completely remotely?",
+        answer:
+          "Yes. Many clients share data through cloud accounting, scanned documents or secure folders. For local clients, we can combine remote work with periodic physical visits if needed.",
+      },
+      {
+        question: "Will you coordinate with my auditor and tax consultant?",
+        answer:
+          "Yes. Properly maintained books make audit and tax filing much smoother. We work with your existing CA or our own team – whichever you prefer.",
+      },
     ],
   },
   {
@@ -126,6 +194,23 @@ export const services = [
       "More credible financial statements for banks, vendors and investors.",
       "Actionable recommendations instead of just an audit report.",
     ],
+    faqs: [
+      {
+        question: "When does tax audit or statutory audit become mandatory?",
+        answer:
+          "It depends on the legal form of the entity and turnover / profit levels. We study your latest financials and confirm clearly whether audit is compulsory or only advisable.",
+      },
+      {
+        question: "How early should we start audit work?",
+        answer:
+          "Ideally, audit planning starts soon after year-end and field work begins once books are largely ready. Starting early reduces last-minute pressure on both your team and ours.",
+      },
+      {
+        question: "Will audit disrupt our day-to-day work?",
+        answer:
+          "We plan visits and data requests in advance so your team can prepare. Most work is done off-site, and we keep on-site time focused and structured.",
+      },
+    ],
   },
   {
     tag: "06",
@@ -146,9 +231,26 @@ export const services = [
     ],
     benefits: [
       "Avoid heavy additional fees and disqualification of directors.",
-      "Neatly documented registers and ROC records – helpful during DD.",
+      "Neatly documented registers and ROC records – helpful during due diligence.",
       "Timely event-based filings whenever there is a change in structure.",
       "Single team taking ownership of your complete MCA calendar.",
+    ],
+    faqs: [
+      {
+        question: "What happens if ROC filings are delayed?",
+        answer:
+          "MCA can charge additional fees and in serious cases directors may face disqualification. We first check the current status and then plan a step-by-step regularisation.",
+      },
+      {
+        question: "Is ROC compliance different from income-tax and GST?",
+        answer:
+          "Yes. ROC/MCA compliances relate to your legal entity (company or LLP), whereas income tax and GST deal with taxation. All three need to be taken care of separately.",
+      },
+      {
+        question: "Can you help us clean up old pending ROC forms?",
+        answer:
+          "Yes. We prepare a compliance status report, list out all pending forms, and then file them in a logical order after your approval.",
+      },
     ],
   },
   {
@@ -174,6 +276,23 @@ export const services = [
       "Reduced risk of penalties, interest and disputes with staff.",
       "Standardised HR and payroll documentation to support growth.",
     ],
+    faqs: [
+      {
+        question: "From how many employees do PF and ESIC normally apply?",
+        answer:
+          "The thresholds depend on the specific law and state, but in many cases PF applies from 20 employees and ESIC from 10. We review your headcount and advise based on current rules.",
+      },
+      {
+        question: "Do we need to share full salary details with you every month?",
+        answer:
+          "Yes, we need updated salary, attendance and variable pay details to process payroll correctly. We use simple templates so your HR or admin team can share the data easily.",
+      },
+      {
+        question: "Is employee salary data kept confidential?",
+        answer:
+          "Absolutely. Payroll and employee information is handled only by a restricted team and shared with you through secure channels.",
+      },
+    ],
   },
   {
     tag: "08",
@@ -197,6 +316,23 @@ export const services = [
       "Better chances of sanction with realistic projections and ratios.",
       "Clear view of future cash needs so you can avoid surprises.",
       "Strategic finance support without the cost of a full-time CFO.",
+    ],
+    faqs: [
+      {
+        question: "When should we start preparing for a bank loan?",
+        answer:
+          "Ideally 4–8 weeks before you actually need the funds. This gives enough time to prepare financials, projections and documentation, and to respond to bank queries calmly.",
+      },
+      {
+        question: "Do you work only with a particular bank?",
+        answer:
+          "No. We prepare reports and help you present them – you are free to choose your bank or NBFC. We can also share practical feedback on what different lenders usually look for.",
+      },
+      {
+        question: "Is Virtual CFO support only for large companies?",
+        answer:
+          "Not at all. It is designed exactly for SMEs that need senior finance guidance a few days a month instead of a full-time CFO on payroll.",
+      },
     ],
   },
 ];
