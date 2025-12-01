@@ -1,54 +1,61 @@
-
 // src/components/HomeFAQ.jsx
-
 import React from "react";
 
-const faqs = [
+const FAQ_ITEMS = [
   {
-    question: "Do you only work with companies in a specific city or state?",
-    answer:
-      "We work with clients across India using phone, email and online meetings. Most registrations and filings are done online, so location is rarely a limitation."
+    q: "Who will be handling my tax and compliance work?",
+    a: "All assignments are supervised by experienced Chartered Accountants. Routine work is managed by our trained team, but final review and key decisions are always done by a CA."
   },
   {
-    question: "What documents do I need to start a new company or firm?",
-    answer:
-      "It depends on the chosen structure (proprietorship, partnership, LLP, company, NGO etc.). Typically we need PAN, Aadhaar, address proofs, photographs and basic business details. Once we understand your plan, we share a clear checklist."
+    q: "How much time does it take to register a new company or firm?",
+    a: "Subject to availability of name and document readiness, proprietorships and partnerships can be set up within a few days. Private limited companies and LLPs generally take 7–10 working days once KYC and signatures are complete."
   },
   {
-    question: "Can you handle both GST and income-tax work together?",
-    answer:
-      "Yes. For many clients we manage end-to-end compliance – GST registration & returns, income-tax filings, TDS, accounting, audits and ROC/MCA work – so that there is one point of contact."
+    q: "Can you also manage GST, TDS and ROC on a monthly basis?",
+    a: "Yes. Many clients engage us as their virtual finance and compliance team. We handle monthly accounting, GST and TDS returns, ROC filings and coordination with your internal staff or accountant."
   },
   {
-    question: "How are your fees decided?",
-    answer:
-      "Fees depend on the nature of work, entity type, volume and complexity. After understanding your requirement, we share a transparent proposal mentioning scope, timelines and commercials before starting any assignment."
+    q: "Do you work only with large companies or also with small businesses?",
+    a: "We actively work with individuals, proprietors, freelancers, professionals, MSMEs, startups and growing companies. Engagements are customised based on the size and complexity of your business."
   },
   {
-    question: "Do you provide one-time clean-up services?",
-    answer:
-      "Yes. If your books, GST or income-tax filings are pending or not in order, we can do a one-time clean-up and regularisation, and then optionally move to an ongoing retainer model."
+    q: "What documents are generally required to get started?",
+    a: "Basic KYC (PAN, Aadhaar, address proof), business details, previous returns (if any) and bank statements are usually enough to start. For specific services like company incorporation or loans, we share a detailed checklist."
+  },
+  {
+    q: "How do you charge for your services?",
+    a: "For one-time work like registration, clean-up or a project report, we follow task-based pricing. For ongoing compliance, we usually recommend a fixed monthly/annual retainer so you have clarity on cost and scope."
   }
 ];
 
 export default function HomeFAQ() {
   return (
-    <section>
+    <section className="home-faq">
       <div className="container section-inner">
-        <div className="section-header">
+        <div className="section-header section-header-centered">
           <div>
             <div className="section-title">Frequently asked questions</div>
             <div className="section-kicker">
-              Quick answers to common queries before you get started with us.
+              Answers to some of the common questions business owners ask us
+              before coming on board.
             </div>
           </div>
         </div>
 
-        <div className="faq-grid">
-          {faqs.map((faq, idx) => (
-            <details key={idx} className="faq-item">
-              <summary>{faq.question}</summary>
-              <p>{faq.answer}</p>
+        <div className="faq-list">
+          {FAQ_ITEMS.map((item, idx) => (
+            <details
+              key={idx}
+              className="faq-item"
+              open={idx === 0} // first one open by default
+            >
+              <summary className="faq-summary">
+                <span>{item.q}</span>
+                <span className="faq-icon">⌄</span>
+              </summary>
+              <div className="faq-body">
+                <p>{item.a}</p>
+              </div>
             </details>
           ))}
         </div>
